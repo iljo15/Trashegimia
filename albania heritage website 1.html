@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trashëgimia Kulturore dhe Natyrore e Shqipërisë</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #8B5A2B;      /* Deep brown */
+            --primary-light: #A67C52; /* Lighter brown */
+            --secondary: #4A6741;     /* Forest green */
+            --accent: #D4AA7D;        /* Sandy beige */
+            --dark: #2C2418;          /* Dark brown */
+            --light: #F5F2EB;         /* Off-white */
+            --light-accent: #E8DCCA;  /* Light beige */
+            --text: #332B1A;          /* Dark text color */
+            --background-texture: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d0c8b0' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--light);
+            background-image: var(--background-texture);
+            color: var(--text);
+            line-height: 1.6;
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+        }
+        
+        p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        header {
+            background-color: var(--primary-light);
+            color: var(--light);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+        header.hidden {
+            transform: translateY(-100%);
+        }
+        
+        header.scrolled {
+            background-color: rgba(166, 124, 82, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+        
+        .logo img {
+            height: 100px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://akt.gov.al/wp-content/uploads/2023/10/Grama-Bay-Fation-Plaku.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--light), transparent);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.5s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .decorative-line {
+            width: 150px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        .decorative-line::before, .decorative-line::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            top: -4.5px;
+        }
+        
+        .decorative-line::before {
+            left: -6px;
+        }
+        
+        .decorative-line::after {
+            right: -6px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--primary);
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            color: var(--light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover::before {
+            width: 100%;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--light);
+            font-size: 1.2rem;
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        section {
+            padding: 7rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            display: inline-block;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-title .decorative-line {
+            margin-bottom: 2rem;
+        }
+        
+        .intro-text {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding: 0 1rem;
+        }
+        
+        .intro-text::before, .intro-text::after {
+            content: '"';
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--primary-light);
+            opacity: 0.2;
+            position: absolute;
+        }
+        
+        .intro-text::before {
+            top: -20px;
+            left: 0;
+        }
+        
+        .intro-text::after {
+            bottom: -50px;
+            right: 0;
+        }
+        
+        .pattern-bg {
+            background-color: var(--light-accent);
+            background-image: var(--background-texture);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 4rem;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .card {
+            background-color: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 2;
+        }
+        
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .card:hover .card-img img {
+            transform: scale(1.15);
+        }
+        
+        .card-content {
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .card-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .card-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .card-category {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: var(--light);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 5rem;
+            background-color: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .featured-img {
+            position: relative;
+            min-height: 500px;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        }
+        
+        .featured-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), transparent);
+        }
+        
+        .featured-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .featured-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .featured-reverse .featured-img {
+            order: 1;
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .gallery-item {
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .list-section {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 4rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .list-section:hover {
+            transform: translateY(-10px);
+        }
+        
+        .list-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .list-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .list-section ul {
+            list-style-position: outside;
+            margin-left: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+        }
+        
+        .list-section li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+        
+        .list-section li::marker {
+            color: var(--secondary);
+        }
+        
+        .diagonal-section {
+            position: relative;
+            padding: 8rem 0;
+            margin: 8rem 0;
+            background-color: var(--light-accent);
+            background-image: var(--background-texture);
+        }
+        
+        .diagonal-section::before,
+        .diagonal-section::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background-color: var(--light);
+            z-index: 1;
+        }
+        
+        .diagonal-section::before {
+            top: 0;
+            transform: translateY(-50%) skewY(-3deg);
+        }
+        
+        .diagonal-section::after {
+            bottom: 0;
+            transform: translateY(50%) skewY(3deg);
+        }
+        
+        .diagonal-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .call-to-action {
+            background-color: var(--primary);
+            position: relative;
+            color: var(--light);
+            text-align: center;
+            padding: 6rem 2rem;
+            overflow: hidden;
+        }
+        
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.2;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .call-to-action h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .call-to-action p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .call-to-action .btn {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+        
+        .call-to-action .btn:hover {
+            color: var(--dark);
+        }
+        
+        .call-to-action .btn::before {
+            background-color: var(--accent);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 5rem 2rem 3rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 0.8rem;
+            display: inline-block;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: var(--primary-light);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-section ul li:hover {
+            transform: translateX(5px);
+        }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--light);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .footer-section ul li a {
+            color: var(--light-accent);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .footer-section ul li a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-light);
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-section ul li a:hover::before {
+            transform: translateX(5px);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icons a {
+            color: var(--light);
+            font-size: 1.3rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--dark);
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-accent);
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-box {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--primary);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .icon-feature {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .text-highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        blockquote {
+            font-style: italic;
+            position: relative;
+            padding: 2rem 3rem;
+            margin: 2rem 0;
+            background-color: var(--light-accent);
+            border-radius: 10px;
+        }
+        
+        blockquote::before, blockquote::after {
+            content: '"';
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            position: absolute;
+            color: var(--primary-light);
+            opacity: 0.3;
+        }
+        
+        blockquote::before {
+            top: 10px;
+            left: 10px;
+        }
+        
+        blockquote::after {
+            bottom: -20px;
+            right: 10px;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 4rem auto;
+            width: 70%;
+            opacity: 0.3;
+        }
+        
+        @media (max-width: 1200px) {
+            .featured-item {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-img {
+                min-height: 400px;
+                clip-path: none;
+            }
+            
+            .featured-reverse .featured-img {
+                order: 0;
+                clip-path: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 100px; /* Increase this value as needed */
+            }
+            
+            /* Optionally make the hero section taller on mobile */
+            .hero {
+                height: 110vh; /* Makes it slightly taller than the viewport */
+            }
+}
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark);
+                padding: 1.5rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .list-section {
+                padding: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .intro-text {
+                font-size: 1.2rem;
+            }
+            
+            .card-img {
+                height: 200px;
+            }
+            
+            .cards-container {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+        
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .card-content {
+                padding: 1.5rem;
+            }
+            
+            .card-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .featured-content {
+                padding: 2rem;
+            }
+            
+            .featured-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .call-to-action h2 {
+                font-size: 2.2rem;
+            }
+            
+            .call-to-action p {
+                font-size: 1.1rem;
+            }
+            
+            .featured-img {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="Logo Tr.webp" alt="Logo">
+                Trashëgimia Shqiptare
+            </a>
+            <button class="hamburger">☰</button>
+            <ul class="nav-links">
+                <li><a href="#natyrore">Trashëgimia Natyrore</a></li>
+                <li><a href="#materiale">Trashëgimia Materiale</a></li>
+                <li><a href="#etnografike">Trashëgimia Etnografike</a></li>
+                <li><a href="#shpirterore">Trashëgimia Shpirtërore</a></li>
+                <li><a href="#ekonomike">Ndikimi Ekonomik</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Trashëgimia Kulturore dhe Natyrore e Shqipërisë</h1>
+            <div class="decorative-line"></div>
+            <p>Një udhëtim nëpër pasuritë e jashtëzakonshme natyrore dhe kulturore të vendit tonë, që tregojnë historinë, identitetin dhe bukurinë e Shqipërisë.</p>
+            <a href="#natyrore" class="btn">Zbulo Më Shumë</a>
+        </div>
+        <a href="#natyrore" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+
+    <section id="natyrore">
+        <div class="section-title">
+            <h2>Trashëgimia Natyrore</h2>
+            <div class="decorative-line"></div>
+        </div>
+        <p class="intro-text">Trashëgimia natyrore shqiptare është një pasuri e jashtëzakonshme që përfshin peizazhe mahnitëse, biodiversitet të pasur dhe monumente natyrore unike. Shqipëria është e bekuar me male madhështore, liqene të kthjellëta, lumenj të rrëmbyeshëm dhe një vijë bregdetare të gjatë që përqafon detin Adriatik dhe Jon.</p>
+        
+        <div class="featured-item">
+            <div class="featured-img" style="background-image: url('Lura.jpg')"></div>
+            <div class="featured-content">
+                <h3>Parqet Kombëtare</h3>
+                <p>Shqipëria është e pasur me parqe kombëtare dhe rezervate natyrore që ofrojnë peizazhe madhështore dhe biodiversitet të pasur:</p>
+                <ul>
+                    <li>Parku Kombëtar i <span class="text-highlight">Thethit</span>: I njohur për malet e larta dhe ujëvarat mbresëlënëse, si Ujëvara e Grunasit.</li>
+                    <li>Parku Kombëtar i <span class="text-highlight">Valbonës</span>: I famshëm për luginën e bukur dhe malin Jezercë, më i larti në Shqipëri.</li>
+                    <li>Parku Kombëtar i <span class="text-highlight">Llogarasë</span>: Ndodhet midis detit dhe maleve, duke ofruar pamje spektakolare dhe klimë të freskët.</li>
+                    <li>Parku Kombëtar i <span class="text-highlight">Butrintit</span>: Një nga zonat më të rëndësishme arkeologjike dhe natyrore, pjesë e trashëgimisë botërore të UNESCO-s.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://elitetravel.al/wp-content/uploads/2023/10/Lumi-Vjosa-zyrtarisht-shpallet-Park-Kombetare-Insajderi.org_.jpg" alt="Liqenet dhe Lumenjtë">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Ujërat</span>
+                    <h3>Liqenet dhe Lumenjtë</h3>
+                    <p>Liqeni i Shkodrës, Liqeni i Ohrit, Liqeni i Prespës dhe Lumi i Vjosës janë ndër pasuritë ujore më të rëndësishme të Shqipërisë, duke ofruar habitate të pasura dhe peizazhe natyrore mahnitëse.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://kalemitravel.com/wp-content/uploads/2020/05/kanionet-5.jpg" alt="Monumentet Natyrore">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Fenomene</span>
+                    <h3>Monumentet Natyrore</h3>
+                    <p>Kanioni i Osumit, Syri i Kaltër dhe Shpella e Pellumbasit janë ndër monumentet natyrore më mbresëlënëse të Shqipërisë, duke treguar fuqinë dhe bukurinë e natyrës.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://ecotouralbania.com/wp-content/uploads/2022/08/cover_fauna_dhe_flora_divjake-min1-1-scaled.jpg" alt="Flora dhe Fauna">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Biodiversiteti</span>
+                    <h3>Flora dhe Fauna</h3>
+                    <p>Pyjet e ahut, bredhit, pishës dhe lisit mbulojnë male dhe parqe natyrore. Derri i egër, ariu i murrmë, kaprolli dhe shqiponja e artë janë ndër speciet më përfaqësuese të faunës shqiptare.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="foto riviera.jpg" alt="Riviera Shqiptare">
+            </div>
+            <div class="gallery-item">
+                <img src="mali i tomorrit.jpg" alt="Mali i Tomorrit">
+            </div>
+            <div class="gallery-item">
+                <img src="valbona.jpg" alt="Lugina e Valbonës">
+            </div>
+            <div class="gallery-item">
+                <img src="syri.jpg" alt="Syri i Kaltër">
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fas fa-mountain icon-feature"></i>
+                <div class="stat-number">15</div>
+                <div class="stat-text">Parqe Kombëtare dhe Rezervate</div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-water icon-feature"></i>
+                <div class="stat-number">450</div>
+                <div class="stat-text">Km Vijë Bregdetare</div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-leaf icon-feature"></i>
+                <div class="stat-number">3,200</div>
+                <div class="stat-text">Specie Bimore</div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-paw icon-feature"></i>
+                <div class="stat-number">350</div>
+                <div class="stat-text">Specie Shtazore</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="diagonal-section">
+        <div class="diagonal-content">
+            <section id="materiale">
+                <div class="section-title">
+                    <h2>Trashëgimia Kulturore Materiale</h2>
+                    <div class="decorative-line"></div>
+                </div>
+                <p class="intro-text">Trashëgimia kulturore materiale shqiptare përfshin monumentet, objektet historike dhe arkitekturën që pasqyrojnë historinë dhe identitetin e kombit shqiptar. Kjo trashëgimi është dëshmi e kulturës së lashtë dhe ndikimeve të ndryshme historike që kanë kaluar nëpër territoret shqiptare.</p>
+                
+                <div class="list-section">
+                    <h3>Monumentet Arkeologjike</h3>
+                    <ul>
+                        <li><span class="text-highlight">Butrinti</span>: Një qytet antik i listuar si pasuri botërore nga UNESCO, me rrënoja të periudhave greke, romake, bizantine dhe veneciane.</li>
+                        <li><span class="text-highlight">Apollonia</span>: Qytet antik ilir, i themeluar nga kolonët grekë, me teatro, mure mbrojtëse dhe manastirin mesjetar.</li>
+                        <li><span class="text-highlight">Amantia</span>: Një qytet ilir me stadium antik dhe mure mbrojtëse, që dëshmon fuqinë e fisit amant.</li>
+                        <li><span class="text-highlight">Durrësi Antik</span>: Amfiteatri romak, mozaikët dhe termat romake janë dëshmi e qytetërimit romak në këtë port të rëndësishëm.</li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    Trashëgimia kulturore materiale shqiptare është një dëshmi e fuqishme e historisë dhe identitetit kombëtar. Mbrojtja dhe promovimi i këtyre monumenteve janë thelbësore për ruajtjen e identitetit kulturor dhe për zhvillimin e turizmit kulturor.
+                </blockquote>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="kalaja krujes.jpg" alt="Kalaja e Krujës">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Fortifikime</span>
+                            <h3>Kalatë Historike</h3>
+                            <p>Kalaja e Krujës, Kalaja e Beratit, Kalaja e Gjirokastrës dhe Kalaja e Rozafës janë monumente madhështore që tregojnë për historinë e pasur dhe arkitekturën mesjetare të Shqipërisë.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="berat.jpg" alt="Qytetet Historike">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Qytetet</span>
+                            <h3>Qytetet Historike</h3>
+                            <p>Berati - Qyteti i një Mijë Dritareve, Gjirokastra - Qyteti i Gurit, Kruja dhe Voskopoja janë qytete historike që pasqyrojnë arkitekturën unike dhe trashëgiminë kulturore të Shqipërisë.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="xhamia.jpg" alt="Objektet e Kultit">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Vende Kulti</span>
+                            <h3>Objektet e Kultit</h3>
+                            <p>Xhamia e Ethem Beut, Kisha e Shën Mërisë, Teqeja e Melanit dhe Katedralja e Shën Kollit janë objekte të rëndësishme të kultit që tregojnë diversitetin fetar dhe kulturor të Shqipërisë.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="etnografike">
+        <div class="section-title">
+            <h2>Trashëgimia Kulturore Etnografike</h2>
+            <div class="decorative-line"></div>
+        </div>
+        <p class="intro-text">Trashëgimia kulturore etnografike shqiptare është një pasuri e jashtëzakonshme që pasqyron historinë, traditat, dhe identitetin kombëtar të popullit shqiptar. Ajo përfshin një gamë të gjerë elementesh, si veshjet tradicionale, zakonet, artizanatin, muzikën, kërcimet, arkitekturën dhe mënyrat e jetesës, të cilat janë ruajtur dhe transmetuar brez pas brezi.</p>
+        
+        <div class="featured-item featured-reverse">
+            <div class="featured-content">
+                <h3>Veshjet Tradicionale</h3>
+                <p>Veshjet popullore shqiptare janë të larmishme dhe unike për çdo krahinë:</p>
+                <ul>
+                    <li><span class="text-highlight">Xhubleta</span> e Malësisë së Madhe - një veshje karakteristike me origjinë të lashtë ilire</li>
+                    <li><span class="text-highlight">Kostumet e jugut</span> me elemente të qëndisura dhe dekorime të pasura</li>
+                    <li><span class="text-highlight">Fustanella</span> e krahinave jugore - një veshje burrash me origjinë antike</li>
+                </ul>
+                <p>Materialet tradicionale përfshijnë leshin, pambukun dhe mëndafshin, të zbukuruara me motive gjeometrike dhe floreale që tregojnë mjeshtërinë e artizanëve shqiptarë përgjatë shekujve.</p>
+            </div>
+            <div class="featured-img" style="background-image: url(https://i.pinimg.com/originals/5b/28/ce/5b28ce41c597aafb2674a11223927e67.jpg)"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="kercime.jpg" alt="Muzika dhe Kërcimi">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Arte Performative</span>
+                    <h3>Muzika dhe Kërcimi</h3>
+                    <p>Muzika tradicionale shqiptare ndahet në dy stile kryesore: polifonia labe dhe toske në jug dhe muzika e veriut me çifteli dhe lahutë. Valle tradicionale si "Vallja e Tropojës", "Vallja e Rugovës" dhe "Vallja e Osman Takës" pasqyrojnë dinamizmin dhe harmoninë e bashkësive shqiptare.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="artizanati.jpg" alt="Artizanati">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Mjeshtëri</span>
+                    <h3>Artizanati</h3>
+                    <p>Artizanati shqiptar përfshin punimet me dorë si qëndisjet, endjet dhe gdhendjet në dru. Veglat muzikore si lahuta dhe çiftelia janë po ashtu pjesë e trashëgimisë artizanale që tregojnë mjeshtërinë e popullit shqiptar.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="arkitektura-e-shtëpive-3.jpg" alt="Arkitektura Tradicionale">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Ndërtime</span>
+                    <h3>Arkitektura Tradicionale</h3>
+                    <p>Kullat e veriut dhe shtëpitë karakteristike të Gjirokastrës dhe Beratit janë monumente që pasqyrojnë mjeshtërinë ndërtimore dhe mënyrën tradicionale të jetesës. Ndërtesat zakonisht janë prej guri, me çati me tjegulla dhe dritare të vogla për mbrojtje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shpirterore" class="pattern-bg">
+        <div class="section-title">
+            <h2>Trashëgimia Kulturore Shpirtërore</h2>
+            <div class="decorative-line"></div>
+        </div>
+        <p class="intro-text">Trashëgimia kulturore shpirtërore shqiptare përfshin të gjitha ato vlera, tradita, rite dhe zakone që janë transmetuar brez pas brezi dhe që pasqyrojnë identitetin dhe shpirtin e popullit shqiptar. Kjo trashëgimi është një pasuri e çmuar që përfshin folklorin, muzikën, vallëzimin, ritualet fetare dhe traditat zakonore.</p>
+        
+        <div class="list-section">
+            <h3>Folklori dhe Tregimet Popullore</h3>
+            <ul>
+                <li><span class="text-highlight">Legjendat dhe Mitet</span>: Shqipëria është e pasur me legjenda që flasin për heronj, kreshnikë dhe figura mitike si Gjergj Elez Alia dhe Mujin me Halilin.</li>
+                <li><span class="text-highlight">Tregimet Popullore</span>: Janë pjesë e gojëdhënave që ruajnë histori të lashta dhe ngjarje të rëndësishme historike.</li>
+                <li><span class="text-highlight">Përrallat dhe Fabulat</span>: Rrëfime që përcjellin mësime morale dhe mençuri popullore.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h3>Muzika Popullore dhe Instrumentet Tradicionale</h3>
+            <ul>
+                <li><span class="text-highlight">Iso-Polifonia</span>: E shpallur nga UNESCO si pasuri botërore shpirtërore, këndohet kryesisht në jug të Shqipërisë.</li>
+                <li><span class="text-highlight">Muzika Epike</span>: Këngë që tregojnë histori të luftërave dhe heronjve kombëtarë.</li>
+                <li><span class="text-highlight">Vajet dhe Këngët e Vajtimit</span>: Forma të veçanta të shprehjes së dhimbjes, sidomos në jug të vendit.</li>
+                <li><span class="text-highlight">Instrumentet Muzikore</span>:
+                    <ul>
+                        <li>Çiftelia: Instrument me dy tela i përdorur kryesisht në Veri.</li>
+                        <li>Lahuta: E përdorur për epikën heroike.</li>
+                        <li>Fylli dhe Fyelli: Instrumente me frymë që përdoren në muzikën tradicionale.</li>
+                        <li>Daullja dhe Defi: Instrumente ritmike që shoqërojnë vallet dhe këngët.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="vallettt.jpg" alt="Vallet Popullore">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Valle</span>
+                    <h3>Vallet Popullore</h3>
+                    <p>Vallja e Tropojës, Vallja e Osman Takës, Vallja e Devollit dhe Vallja e Rugovës janë ndër vallet më të njohura popullore shqiptare, secila me karakteristikat dhe bukurinë e vet të veçantë.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="pashket.jpg" alt="Traditat dhe Ritualet Fetare">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Rite</span>
+                    <h3>Traditat dhe Ritualet Fetare</h3>
+                    <p>Ritet pagane, bektashizmi dhe festat fetare si Pashkët dhe Bajramet janë pjesë e rëndësishme e trashëgimisë shpirtërore shqiptare që tregojnë diversitetin dhe tolerancën fetare të vendit.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="sofra.jpg" alt="Zakonet Familjare">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Familja</span>
+                    <h3>Zakonet Familjare</h3>
+                    <p>Mikpritja, Kanuni i Lekë Dukagjinit, dasmat tradicionale dhe ritet e lindjes dhe vdekjes janë zakone dhe tradita familjare që përcjellin vlerat dhe normat shoqërore të popullit shqiptar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ekonomike">
+        <div class="section-title">
+            <h2>Ndikimi Ekonomik i Trashëgimisë</h2>
+            <div class="decorative-line"></div>
+        </div>
+        <p class="intro-text">Trashëgimia natyrore dhe kulturore shqiptare luan një rol të rëndësishëm në ekonominë e vendit, kryesisht përmes turizmit, promovimit të kulturës dhe zhvillimit të komuniteteve lokale. Këto pasuri ndikojnë në mënyra të shumta në zhvillimin ekonomik të Shqipërisë.</p>
+        
+        <div class="featured-item">
+            <div class="featured-img" style="background-image: url(https://www.kosovo-tourism.ch/wp-content/uploads/2017/12/butrinti.jpeg)"></div>
+            <div class="featured-content">
+                <h3>Turizmi Kulturor dhe Historik,Ndikimi ne Ekonomi</h3>
+                <p>Gjatë muajit shtator 2024, Institucionet e Kulturës janë vizituar nga 217,269 vizitorë. Vihet re  rritje   prej   37% të numrit  të   vizitorëve   në institucionet e kulturës krahasuar me të njëjtin muaj të 2023. Ndërsa rritja për periudhën 9 mujore është 36% më shumë se e njëjta periudhë e vitit 2023. Rritjen më të madhe e kanë vizitorët që kanë zgjedhur të vizitojnë Parqet Arkeologjike dhe siç vihet re nga të dhënat rritja e vizitorëve në këto Parqe është rritur me 74% më shumë. Më poshtë jepet në mënyrë të detajuar numri i vizitorëve për çdo institucion kulturor.</p>
+                <p>Këto destinacione kulturore dhe historike tërheqin mijëra turistë vendas dhe të huaj çdo vit, duke kontribuar në rritjen ekonomike të rajoneve ku ndodhen dhe duke krijuar mundësi punësimi për banorët lokalë.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="thethi.jpg" alt="Turizmi Natyror">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Ekoturizëm</span>
+                    <h3>Turizmi Natyror</h3>
+                    <p>Parqet kombëtare dhe rezervatet natyrore si Thethi dhe Valbona, plazhet dhe bregdeti si Dhërmiu dhe Ksamili, si dhe turizmi malor dhe rural në zona si Vermoshi dhe Razma kontribuojnë në ekonominë lokale dhe zhvillimin e turizmit të qëndrueshëm.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="vaj-ulliri.jpg" alt="Artizanati dhe Produktet Tradicionale">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Produkte</span>
+                    <h3>Artizanati Tradicional</h3>
+                    <p>Punimet me dorë dhe suveniret, si dhe produktet ushqimore tradicionale si rakia, mjalti, vaji i ullirit dhe djathi tradicional janë produkte që kontribuojnë në ekonominë rurale dhe promovimin e kulturës shqiptare.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="bujtina.jpg" alt="Investimet në Infrastrukturë">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Zhvillim</span>
+                    <h3>Investimet në Infrastrukturë</h3>
+                    <p>Restaurimi i monumenteve dhe zhvillimi i infrastrukturës turistike si hotele, restorante dhe rrugë ndikojnë pozitivisht në ekonominë lokale dhe kombëtare, duke rritur vlerën turistike dhe gjeneruar vende pune.</p>
+                </div>
+            </div>
+        </div>
+        
+        <blockquote>
+            Trashëgimia natyrore dhe kulturore shqiptare është një burim i rëndësishëm ekonomik, veçanërisht për sektorin e turizmit dhe zhvillimin rural. Ajo jo vetëm që ndihmon në rritjen e të ardhurave, por edhe në ruajtjen dhe promovimin e identitetit kombëtar.
+        </blockquote>
+    </section>
+
+    <div class="call-to-action">
+        <div class="cta-content">
+            <h2>Zbulo dhe Ndihmoni në Ruajtjen e Trashëgimisë Shqiptare</h2>
+            <div class="decorative-line"></div>
+            <p>Trashëgimia natyrore dhe kulturore shqiptare është një pasuri e çmuar që duhet të ruhet dhe promovohet. Bashkohuni me ne për të zbuluar dhe mbrojtur këto pasuri për brezat e ardhshëm.</p>
+            <a href="https://whc.unesco.org/en/statesparties/al" class="btn" target="_blank" rel="noopener noreferrer">Mëso Më Shumë</a>        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Trashëgimia Shqiptare</h3>
+                <p>Një platformë e dedikuar për promovimin dhe ruajtjen e trashëgimisë natyrore dhe kulturore të Shqipërisë.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Lidhje të Shpejta</h3>
+                <ul>
+                    <li><a href="#natyrore">Trashëgimia Natyrore</a></li>
+                    <li><a href="#materiale">Trashëgimia Materiale</a></li>
+                    <li><a href="#etnografike">Trashëgimia Etnografike</a></li>
+                    <li><a href="#shpirterore">Trashëgimia Shpirtërore</a></li>
+                    <li><a href="#ekonomike">Ndikimi Ekonomik</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Informacione</h3>
+                <ul>
+                    <li><a href="#">Rreth Nesh</a></li>
+                    <li><a href="#">Kontakto</a></li>
+                    <li><a href="#">Donacione</a></li>
+                    <li><a href="#">Partnerët</a></li>
+                    <li><a href="#">Privatësia</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Trashëgimia Shqiptare. Klasa IXA, Shkolla 1-Maji, Tirane.</p>
+            <p> Mars 2025.</p>
+
+        </div>
+    </footer>
+
+    <script>
+
+        
+        // Header scroll effect - hide on scroll down, show on scroll up
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add scrolled class for styling when not at the top
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Hide/show based on scroll direction
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // Scrolling down - hide header
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up - show header
+                header.classList.remove('hidden');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For mobile or negative scrolling
+        }, false);
+
+
+        // Mobile navigation toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close the menu when a link is clicked
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+                            // Back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) { // Show button after scrolling 300px
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Add animation on scroll
+            const elements = document.querySelectorAll('.card, .featured-item, .list-section, .gallery-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(element);
+            });
+        });
+
+
+    </script>
+
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+</html>
